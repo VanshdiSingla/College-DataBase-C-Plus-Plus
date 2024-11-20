@@ -1,0 +1,93 @@
+#include<stdio.h>
+#include<string.h>
+
+typedef struct studentsinformation
+{
+  char name[100];
+  int roll;
+  float cgpa;
+}stuinfo;
+
+typedef struct teachersinformation
+{
+ char name[100];
+ int salary;
+ char subject[80];
+}tecinfo;
+
+typedef struct admininformation
+{
+    char name[100];
+    int salary;
+}adminfo;
+
+void print( stuinfo s[], tecinfo t[], adminfo a[])
+{
+  printf("the info of student 1 is %s,%d,%f\n",s[0].name,s[0].roll,s[0].cgpa);
+  printf("the info of student 2 is %s,%d,%f\n",s[1].name,s[1].roll,s[1].cgpa);
+  printf("the info of student 3 is %s,%d,%f\n",s[2].name,s[2].roll,s[2].cgpa);
+  printf("the info of student 4 is %s,%d,%f\n",s[3].name,s[3].roll,s[3].cgpa);
+  printf("the info of student 5 is %s,%d,%f\n",s[4].name,s[4].roll,s[4].cgpa);
+
+  printf("The info of teacher 1 is %s,%d,%s\n",t[0].name,t[0].salary,t[0].subject);
+  printf("The info of teacher 2 is %s,%d,%s\n",t[1].name,t[1].salary,t[1].subject);
+  printf("The info of teacher 3 is %s,%d,%s\n",t[2].name,t[2].salary,t[2].subject);
+  printf("The info of teacher 4 is %s,%d,%s\n",t[3].name,t[3].salary,t[3].subject);
+  printf("The info of teacher 5 is %s,%d,%s\n",t[4].name,t[4].salary,t[4].subject);
+ 
+  printf("The info of admin 1 is %s,%d\n",a[0].name,a[0].salary);
+  printf("The info of admin 2 is %s,%d\n",a[1].name,a[1].salary);
+  printf("The info of admin 3 is %s,%d\n",a[2].name,a[2].salary);
+  printf("The info of admin 4 is %s,%d\n",a[3].name,a[3].salary);
+  printf("The info of admin 5 is %s,%d\n",a[4].name,a[4].salary);
+}
+
+int main()
+{
+    stuinfo s[5];
+    for(int i=0;i<5;i++)
+    {
+      printf("Enter name of students "),
+      scanf("%s",&s[i].name);
+    }
+    for(int i=0;i<5;i++)
+    {
+      printf("Enter roll of students "),
+      scanf("%d",&s[i].roll);
+    }
+    for(int i=0;i<5;i++)
+    {
+      printf("Enter cgpa of students "),
+      scanf("%f",&s[i].cgpa);
+    }
+
+    tecinfo t[5];
+    for(int i=0;i<5;i++)
+    {
+      printf("Enter name of teachers "),
+      scanf("%s",&t[i].name);
+    }
+    for(int i=0;i<5;i++)
+    {
+      printf("Enter salary of teachers "),
+      scanf("%d",&t[i].salary);
+    }
+    for(int i=0;i<5;i++)
+    {
+      printf("Enter subject of teachers "),
+      scanf("%s",&t[i].subject);
+    }
+
+    adminfo a[5];
+    for(int i=0;i<5;i++)
+    {
+      printf("Enter name of admins "),
+      scanf("%s",&a[i].name);
+    }
+    for(int i=0;i<5;i++)
+    {
+      printf("Enter name of admins "),
+      scanf("%d",&a[i].salary);
+    }
+    print(s,t,a);
+}
